@@ -8,9 +8,358 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    
-    <img src="" alt="">
-    
+<style>* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    color: #222;
+}
+
+.checkout {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    min-height: 100vh;
+}
+
+.main {
+    max-width: 700px;
+    width: 100%;
+    margin-left: auto;
+    padding: 45px 50px;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 35px;
+}
+
+.steps {
+    display: flex;
+    gap: 12px;
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 35px;
+}
+
+.steps .active {
+    color: #222;
+    font-weight: bold;
+}
+
+.box {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.box h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 15px 0 7px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 15px;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: #111;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.muted {
+    color: #777;
+    font-size: 13px;
+}
+
+button {
+    width: 100%;
+    border: none;
+    border-radius: 7px;
+    padding: 16px;
+    margin-top: 25px;
+    background: #111;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #333;
+}
+
+.summary {
+    background: #f7f7f7;
+    border-left: 1px solid #ddd;
+    padding: 50px;
+}
+
+.summary h2 {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #ddd;
+}
+
+.product-image {
+    width: 70px;
+    height: 70px;
+    background: #ddd;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 5px;
+}
+
+.product-info span {
+    color: #777;
+    font-size: 13px;
+}
+
+.discount {
+    display: flex;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.discount input {
+    flex: 1;
+}
+
+.discount button {
+    width: 110px;
+    margin: 0;
+    background: #ddd;
+    color: #222;
+}
+
+.line {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    color: #555;
+}
+
+.total {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+    margin-top: 25px;
+    color: #111;
+    font-size: 20px;
+}
+
+footer {
+    text-align: center;
+    color: #999;
+    font-size: 12px;
+    margin-top: 30px;
+}
+
+@media (max-width: 800px) {
+
+    .checkout {
+        grid-template-columns: 1fr;
+    }
+
+    .main {
+        margin: auto;
+        padding: 30px 20px;
+    }
+
+    .summary {
+        border-left: none;
+        border-top: 1px solid #ddd;
+        padding: 30px 20px;
+    }
+
+    .row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}</style>
+
+<div class="checkout">
+
+    <main class="main">
+
+        <header class="logo">
+            Car Parts
+        </header>
+
+        <div class="steps">
+            <span class="active">Kosár</span>
+            <span>›</span>
+            <span class="active">Fizetés</span>
+            <span>›</span>
+            <span>Véglegesítés</span>
+        </div>
+
+        <section class="box">
+            <h2>Kapcsolattartási adatok</h2>
+
+            <label>Email cím</label>
+            <input type="email" placeholder="pelda@nejanet.hu">
+
+            <label>Telefonszám</label>
+            <input type="tel" placeholder="+36 30 123 4567">
+        </section>
+
+        <section class="box">
+            <h2>Szállítási cím</h2>
+
+            <div class="row">
+                <div>
+                    <label>Vezetéknév</label>
+                    <input type="text">
+                </div>
+
+                <div>
+                    <label>Keresztnév</label>
+                    <input type="text">
+                </div>
+            </div>
+
+            <label>Ország</label>
+            <select>
+                <option>Magyarország</option>
+                <option>Ausztria</option>
+                <option>Németország</option>
+            </select>
+
+            <label>Utca, házszám</label>
+            <input type="text" placeholder="Cifrakapu u. 158">
+
+            <div class="row">
+                <div>
+                    <label>Város</label>
+                    <input type="text" placeholder="Eger">
+                </div>
+
+                <div>
+                    <label>Irányítószám</label>
+                    <input type="text" placeholder="3300">
+                </div>
+            </div>
+        </section>
+
+        <section class="box">
+            <h2>Fizetés</h2>
+
+            <p class="muted">
+                Minden tranzakció biztonságosan titkosítva.
+            </p>
+            <label>Név</label>
+            <input type="text" placeholder="Szomorú Szamuráj">
+
+            <label>Kártyaszám</label>
+            <input type="number" placeholder="1234 1234 1234 1234">
+
+            <div class="row">
+                <div>
+                    <label>Lejárat</label>
+                    <input type="number" placeholder="MM/YY">
+                </div>
+
+                <div>
+                    <label>Biztonsági kód</label>
+                    <input type="number" placeholder="CVV">
+                </div>
+            </div>
+<a href="sikfizetes.html">
+            <button class="button-link"><img style="max-width: 25px; margin-right: 10px;" src="img/Black_and_White_Square_Real_Estate_Logo-removebg-preview.png" alt="">Fizetés</button>
+</a>        
+        </section>
+
+        <footer>
+            © 2026 CARPARTS ·<a href="adatvedelem.html">Adatvédelem</a>  · <a href="aszf.html">Általános szerződési feltételek</a>
+        </footer>
+
+    </main>
+
+
+    <!-- JOBB OLDAL -->
+    <aside class="summary">
+
+        <h2>Rendelés összesítő</h2>
+
+        <div class="product">
+            <div class="product-image">
+                TERMÉK
+            </div>
+
+            <div class="product-info">
+                <strong>Premium Hoodie</strong>
+                <span>Fekete · M</span>
+                <span>1 db</span>
+            </div>
+
+            <strong>12 990 Ft</strong>
+        </div>
+
+        <div class="discount">
+            <input type="text" placeholder="Kuponkód">
+            <button>Alkalmaz</button>
+        </div>
+
+        <div class="line">
+            <span>Részösszeg</span>
+            <span>12 990 Ft</span>
+        </div>
+
+        <div class="line">
+            <span>Szállítás</span>
+            <span>2 000 Ft</span>
+        </div>
+
+        <div class="line total">
+            <span>Összesen</span>
+            <strong>14 990 Ft</strong>
+        </div>
+
+    </aside>
+
+</div>
+
 </body>
 </html>
