@@ -1,5 +1,5 @@
 body{
-
+    background-color: #ffe4c4;
 }
 
 h1{
@@ -24,4 +24,42 @@ p{
 
 #logo{
     max-height: 50px;
+}
+
+.product,
+.cart-product {
+    background: #ffebd2;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #111;
+    color: white;
+    margin: 5px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.cart-total {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: right;
+}
+
+header {
+    background: #111;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

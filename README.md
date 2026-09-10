@@ -3,3 +3,7 @@ Ennek az ikt projekt feladatnak az elkészítési terve autók alkatrészének e
 
 Feladat elvárások:
 - Reszponzivitás
+
+Todo:
+- alkatrészeknél ki lehessen választani a kocsi márkát és amikor hozzá adjuk a kosárhoz akkor a kosárban már a márka nevet is irja az alkatrésznél
+- 

@@ -53,13 +53,29 @@
 
                             </ul>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link"  href="cart.html"> 🛒 Kosár (<span id="cart-count">0</span>) </a>
+                        </li>
+                        
 
                     </ul>
                 </div>
             </div>
         </nav>
 
-    <h1>Legjobb ár érték arányú autó alkatrészek az összes autóhoz</h1>
+        <div class="product">
+            <h2>Motorolaj</h2>
+            <p>5 000 Ft</p> <button onclick="addToCart(1, 'Motorolaj', 5000)"> Kosárba </button>
+        </div>
+        <div class="product">
+            <h2>Fékbetét</h2>
+            <p>12 000 Ft</p> <button onclick="addToCart(2, 'Fékbetét', 12000)"> Kosárba </button>
+        </div>
+        <div class="product">
+            <h2>Légszűrő</h2>
+            <p>3 500 Ft</p> <button onclick="addToCart(3, 'Légszűrő', 3500)"> Kosárba </button>
+        </div>
+        <script src="script.js"></script>
 
 </body>
 </html>
